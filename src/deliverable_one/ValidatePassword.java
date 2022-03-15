@@ -7,9 +7,7 @@ public class ValidatePassword {
 	public static void main(String[] args) {
 		final int NUM_UP = 1;
 		final int NUM_LOW = 1;
-		final int NUM_NUM = 1;
 		
-		int hasNum = 0;
 		int hasLow = 0;
 		int hasUp = 0;
 		
@@ -25,11 +23,10 @@ public class ValidatePassword {
 				hasUp++;
 			else if (Character.isLowerCase(c))
 				hasLow++;
-			else if (Character.isDigit(c))
-				hasNum++;		
+			
 		}
 		
-		if(hasUp >= NUM_UP && hasLow >= NUM_LOW && hasNum >= NUM_NUM && password.length() >=7 && password.length() <= 12 && password.contains("!"))
+		if(hasUp >= NUM_UP && hasLow >= NUM_LOW && password.length() >=7 && password.length() <= 12 && password.contains("!"))
 			System.out.println("Password valid and accepted");
 		else {
 			System.out.println("Error");
